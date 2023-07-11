@@ -1,0 +1,36 @@
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+const body = document.querySelector("body") as HTMLBodyElement;
+
+@Component({
+  selector: 'app-modal-livro',
+  templateUrl: './modal-livro.component.html',
+  styleUrls: ['./modal-livro.component.css']
+})
+export class ModalLivroComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  @Input() livro: Object = {};
+  statusModal: boolean = true;
+  @Output() mudouModal = new EventEmitter()
+
+  fecharModal() {
+    this.statusModal = false
+    this.mudouModal.emit(this.statusModal)
+    body.style.overflow = "scroll"
+  }
+
+  esconderScroll(){
+    if(this.statusModal == true ) {
+      body.style.overflow = "hidden";
+    }
+  }
+
+  lerPrevia() {
+    window.open( '_blank');
+  }
+}
