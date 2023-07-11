@@ -9,7 +9,8 @@ import { RodapeComponent } from './components/rodape/rodape.component';
 import { ListaLivrosComponent } from './views/lista-livros/lista-livros.component';
 import { ModalLivroComponent } from './views/modal-livro/modal-livro.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
