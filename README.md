@@ -10,7 +10,8 @@ Esta é uma aplicação usada para pesquisar livros presentes numa API externa d
 
 ## Comandos para roda a aplicação
 ```
-1. npm install
-2. ng serve
+1. npm install -g @angular/cli
+2. npm install
+3. ng serve
 ```
 
