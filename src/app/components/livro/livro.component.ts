@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Livro } from 'src/app/models/interfaces';
 
 @Component({
   selector: 'app-livro',
@@ -8,7 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LivroComponent implements OnInit {
 
   @Input()
-  livro: Object = {};
+  livro!: Livro;
+
   modalAberto: boolean = false;
 
   constructor() { }

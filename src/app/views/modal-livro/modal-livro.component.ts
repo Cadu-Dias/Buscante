@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Livro } from 'src/app/models/interfaces';
 
 const body = document.querySelector("body") as HTMLBodyElement;
 
@@ -14,7 +15,7 @@ export class ModalLivroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() livro: Object = {};
+  @Input() livro!: Livro;
   statusModal: boolean = true;
   @Output() mudouModal = new EventEmitter()
 
@@ -31,6 +32,6 @@ export class ModalLivroComponent implements OnInit {
   }
 
   lerPrevia() {
-    window.open( '_blank');
+    window.open(this.livro.previewLink, '_blank');
   }
 }

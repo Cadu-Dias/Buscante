@@ -11,6 +11,7 @@ import { ModalLivroComponent } from './views/modal-livro/modal-livro.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AutoriaPipe } from './pipes/autoria.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     LivroComponent,
     RodapeComponent,
     ListaLivrosComponent,
-    ModalLivroComponent
+    ModalLivroComponent,
+    AutoriaPipe
   ],
   imports: [
     BrowserModule,
